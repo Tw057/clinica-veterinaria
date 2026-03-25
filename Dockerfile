@@ -1,7 +1,10 @@
 FROM php:8.2-cli
 
-# instala drivers do banco
-RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql
+# instala dependências do postgres
+RUN apt-get update && apt-get install -y libpq-dev
+
+# instala extensões
+RUN docker-php-ext-install pdo pdo_pgsql
 
 WORKDIR /app
 
