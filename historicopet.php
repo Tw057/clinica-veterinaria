@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . "/../config/database.php";
-require "classes/atendimento.php";
+require_once __DIR__ . "/classes/Atendimento.php";
 
 $pet_id = 1;
 
