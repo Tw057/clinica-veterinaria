@@ -1,7 +1,7 @@
 FROM php:8.2-cli
 
-
-RUN docker-php-ext-install pdo pdo_mysql
+# instala drivers do banco
+RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql
 
 WORKDIR /app
 
