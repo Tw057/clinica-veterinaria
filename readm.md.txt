@@ -1,23 +1,39 @@
-# 🐾 Clínica Veterinária Patinhas & Cia
+# 🐾 Sistema de Clínica Veterinária
 
-Sistema de gestão para clínica veterinária desenvolvido em PHP com MySQL.
+Sistema web completo para gerenciamento de clínica veterinária.
 
-## 📋 Funcionalidades
+## 🚀 Funcionalidades
 
-- ✅ Cadastro de clientes
-- ✅ Cadastro de pets vinculados aos clientes
-- ✅ Cadastro de serviços oferecidos
-- ✅ Agendamento de atendimentos
-- ✅ Verificação de disponibilidade de horários
-- ✅ Histórico de atendimentos por pet
-- ✅ Listagem de atendimentos por período
+* Cadastro de clientes
+* Cadastro de pets
+* Agendamento de atendimentos
+* Histórico de atendimentos
 
-## 🛠️ Tecnologias utilizadas
+## 🛠️ Tecnologias
 
-- PHP 7.4+
-- MySQL 5.7+
-- HTML5
-- CSS3
-- PDO para conexão com banco de dados
+* PHP
+* PostgreSQL
+* Docker
+* Bootstrap
+* Render (Deploy)
 
-## 📁 Estrutura do projeto
+## 🌐 Acesso ao sistema
+
+👉 https://SEU-LINK.onrender.com
+
+## 📂 Código-fonte
+
+👉 https://github.com/Tw057/clinica-veterinaria
+
+## 💻 Como rodar localmente
+
+```bash
+git clone https://github.com/Tw057/clinica-veterinaria.git
+cd clinica-veterinaria
+php -S localhost:8000
+```
+
+## 👨‍💻 Autor
+
+Thiago Waquim
+
