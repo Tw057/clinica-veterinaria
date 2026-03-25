@@ -1,18 +1,19 @@
 <?php
 class Database {
     private static $pdo = null;
-    
+
     public static function getConnection() {
         if (self::$pdo === null) {
-            $host = "localhost";
-            $db = "clinica_veterinaria";
+
+            $host = "mysql.railway.internal";
+            $db = "railway";
             $user = "root";
-            $pass = "cr75bolasdeouro@123";
-            $charset = "utf8mb4";
-            
+            $pass = "KNvgfiCrUkjdCSjRnIbdOvjuQdeIVrPp";
+            $port = "3306";
+
             try {
                 self::$pdo = new PDO(
-                    "mysql:host=$host;dbname=$db;charset=$charset",
+                    "mysql:host=$host;port=$port;dbname=$db;charset=utf8mb4",
                     $user,
                     $pass,
                     [
@@ -21,7 +22,7 @@ class Database {
                     ]
                 );
             } catch (PDOException $e) {
-                die("Erro na conexão com o banco: " . $e->getMessage());
+                die("Erro: " . $e->getMessage());
             }
         }
         return self::$pdo;
