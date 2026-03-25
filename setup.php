@@ -3,7 +3,7 @@ require_once __DIR__ . "/config/database.php";
 
 $pdo = Database::getConnection();
 
-$sql = "
+$pdo->exec("
 CREATE TABLE IF NOT EXISTS clientes (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100),
@@ -38,8 +38,6 @@ CREATE TABLE IF NOT EXISTS atendimentos (
     hora TIME,
     observacoes TEXT
 );
-";
+");
 
-$pdo->exec($sql);
-
-echo "Tabelas criadas com sucesso!";
+echo "OK banco criado";
