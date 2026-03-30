@@ -4,7 +4,7 @@ require_once __DIR__ . "/../classes/Atendimento.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $pdo = Database::getConnection();
-    
+
     $pet_id = $_POST['pet_id'] ?? 0;
     $servico_id = $_POST['servico_id'] ?? 0;
     $data = $_POST['data'] ?? '';

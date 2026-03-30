@@ -5,7 +5,7 @@ require_once __DIR__ . "/../classes/Pet.php";
 require_once __DIR__ . "/../classes/Cliente.php";
 
 $pdo = Database::getConnection();
-$pet_id = $_GET['pet_id'] ?? null;
+$pet_id = $_GET['pet_id'] ?? null;000
 $cliente_id = $_GET['cliente_id'] ?? null;
 $mensagem = $_GET['msg'] ?? '';
 $erro = $_GET['erro'] ?? '';
