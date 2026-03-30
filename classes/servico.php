@@ -21,7 +21,7 @@ class Servico {
     }
 
     public function listarAtivos() {
-        $sql = "SELECT * FROM servicos WHERE ativo = 1 ORDER BY nome";
+        $sql ="SELECT * FROM servicos WHERE ativo = true ORDER BY nome";
         $stm = $this->pdo->prepare($sql);
         $stm->execute();
         return $stm->fetchAll();
