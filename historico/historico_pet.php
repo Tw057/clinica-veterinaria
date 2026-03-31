@@ -5,7 +5,8 @@ require_once __DIR__ . "/../classes/Pet.php";
 require_once __DIR__ . "/../classes/Cliente.php";
 
 $pdo = Database::getConnection();
-$pet_id = $_GET['pet_id'] ?? null;000
+
+$pet_id = $_GET['pet_id'] ?? null;
 $cliente_id = $_GET['cliente_id'] ?? null;
 $mensagem = $_GET['msg'] ?? '';
 $erro = $_GET['erro'] ?? '';
@@ -13,6 +14,10 @@ $erro = $_GET['erro'] ?? '';
 $pet = new Pet($pdo);
 $cliente = new Cliente($pdo);
 $atendimento = new Atendimento($pdo);
+
+// Busca todos os clientes para o select
+$clientes = $cliente->listarTodos();
+?>
 
 // Busca todos os clientes para o select
 $clientes = $cliente->listarTodos();
