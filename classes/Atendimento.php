@@ -34,8 +34,10 @@ class Atendimento {
             }
             
         } catch (PDOException $e) {
-            error_log("Erro ao criar atendimento: " . $e->getMessage());
-            return ['sucesso' => false, 'mensagem' => 'Erro ao agendar atendimento.'];
+           return [
+        "sucesso" => false,
+        "mensagem" => $e->getMessage()
+    ];
         }
     }
 
