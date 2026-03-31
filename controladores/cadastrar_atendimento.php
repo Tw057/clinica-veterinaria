@@ -13,6 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     $atendimento = new Atendimento($pdo);
     $resultado = $atendimento->criar($pet_id, $servico_id, $data, $hora, $observacoes);
+    var_dump($resultado);
+exit;
     
     if ($resultado['sucesso']) {
         header("Location: /historico/historico_pet.php?pet_id=" . $pet_id . "&msg=" . urlencode($resultado['mensagem']));
