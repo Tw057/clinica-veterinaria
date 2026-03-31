@@ -2,7 +2,7 @@
 require_once __DIR__ . "/../config/database.php";
 require_once __DIR__ . "/../classes/Atendimento.php";
 require_once __DIR__ . "/../classes/pet.php";
-require_once __DIR__ . "/../classes/cliente.php";
+require_once __DIR__ . "/../classes/Cliente.php";
 
 $pdo = Database::getConnection();
 
