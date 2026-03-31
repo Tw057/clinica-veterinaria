@@ -19,9 +19,7 @@ $atendimento = new Atendimento($pdo);
 $clientes = $cliente->listarTodos();
 ?>
 
-// Busca todos os clientes para o select
-$clientes = $cliente->listarTodos();
-?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
