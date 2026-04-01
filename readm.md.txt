@@ -1,9 +1,6 @@
 # 🐾 Clínica Veterinária - Sistema de Gestão
 
 Sistema web completo para gerenciamento de atendimentos em uma clínica veterinária.
-
-![Status](https://img.shields.io/badge/status-online-brightgreen)
-
 ---
 
 ## 🚀 Demonstração
