@@ -19,8 +19,11 @@ class Atendimento {
                 return ['sucesso' => false, 'mensagem' => 'Horário já está ocupado!'];
             }
 
-            $sql = "INSERT INTO atendimentos (pet_id, servico_id, data, hora, observacoes, status)
-                    VALUES (:pet_id, :servico_id, :data, :hora, :observacoes, 'agendado')";
+            // Insere atendimento
+            $sql = "INSERT INTO atendimentos 
+                    (pet_id, servico_id, data, hora, observacoes, status)
+                    VALUES 
+                    (:pet_id, :servico_id, :data, :hora, :observacoes, 'agendado')";
             
             $stm = $this->pdo->prepare($sql);
             $stm->bindParam(':pet_id', $pet_id);
@@ -32,17 +35,19 @@ class Atendimento {
             if ($stm->execute()) {
                 return ['sucesso' => true, 'mensagem' => 'Atendimento agendado com sucesso!'];
             }
-            
+
         } catch (PDOException $e) {
-           return [
-        "sucesso" => false,
-        "mensagem" => $e->getMessage()
-    ];
+            return [
+                "sucesso" => false,
+                "mensagem" => $e->getMessage()
+            ];
         }
     }
 
     public function listarPorPet($pet_id) {
-        $sql = "SELECT a.*, s.nome as nome_servico 
+        $sql = "SELECT 
+                    a.*, 
+                    s.nome as nome_servico 
                 FROM atendimentos a 
                 JOIN servicos s ON a.servico_id = s.id 
                 WHERE a.pet_id = :pet_id 
@@ -55,10 +60,15 @@ class Atendimento {
     }
     
     public function listarPorPeriodo($data_inicio, $data_fim) {
-        $sql = "SELECT a.*, p.nome as nome_pet, c.nome as nome_cliente 
+        $sql = "SELECT 
+                    a.*, 
+                    p.nome as nome_pet, 
+                    c.nome as nome_cliente,
+                    s.nome as nome_servico
                 FROM atendimentos a 
                 JOIN pets p ON a.pet_id = p.id 
                 JOIN clientes c ON p.cliente_id = c.id 
+                JOIN servicos s ON a.servico_id = s.id
                 WHERE a.data BETWEEN :data_inicio AND :data_fim 
                 ORDER BY a.data, a.hora";
         
