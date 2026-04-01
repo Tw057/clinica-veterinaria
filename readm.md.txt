@@ -1,39 +1,84 @@
-# 🐾 Sistema de Clínica Veterinária
+# 🐾 Clínica Veterinária - Sistema de Gestão
 
-Sistema web completo para gerenciamento de clínica veterinária.
+Sistema web completo para gerenciamento de atendimentos em uma clínica veterinária.
 
-## 🚀 Funcionalidades
+![Status](https://img.shields.io/badge/status-online-brightgreen)
 
-* Cadastro de clientes
-* Cadastro de pets
-* Agendamento de atendimentos
-* Histórico de atendimentos
+---
 
-## 🛠️ Tecnologias
+## 🚀 Demonstração
 
-* PHP
-* PostgreSQL
-* Docker
-* Bootstrap
-* Render (Deploy)
+🔗 Acesse o sistema online:  
+(https://clinica-veterinaria-kp0e.onrender.com/)
 
-## 🌐 Acesso ao sistema
+---
 
-👉 https://SEU-LINK.onrender.com
+## 📸 Funcionalidades
 
-## 📂 Código-fonte
+- ✅ Cadastro de clientes
+- ✅ Cadastro de pets
+- ✅ Agendamento de atendimentos
+- ✅ Histórico de atendimentos por pet
+- ✅ Dashboard com últimos atendimentos
+- ✅ Controle de serviços ativos
 
-👉 https://github.com/Tw057/clinica-veterinaria
+---
 
-## 💻 Como rodar localmente
+## 🛠 Tecnologias Utilizadas
 
-```bash
-git clone https://github.com/Tw057/clinica-veterinaria.git
-cd clinica-veterinaria
-php -S localhost:8000
-```
+- PHP (POO)
+- PostgreSQL
+- Bootstrap 5
+- Render (Deploy)
+- Git e GitHub
+
+---
+
+## 🧠 Aprendizados
+
+Este projeto foi desenvolvido com foco em:
+
+- Organização em camadas (classes, controladores)
+- Integração com banco de dados real (PostgreSQL)
+- Tratamento de erros com PDO
+- Deploy de aplicação web
+
+---
+
+## 📂 Estrutura do Projeto
+
+
+/classes
+/controladores
+/config
+/formulario
+/historico
+
+
+---
+
+## ⚙️ Como rodar localmente
+
+1. Clonar o repositório:
+
+git clone https://github.com/seuusuario/clinica-veterinaria.git
+
+
+2. Configurar o banco de dados no arquivo:
+
+config/database.php
+
+
+3. Rodar o projeto em servidor local (XAMPP/Laragon)
+
+---
 
 ## 👨‍💻 Autor
 
-Thiago Waquim
+Desenvolvido por **Thiago Waquim**
 
+---
+
+## ⭐ Considerações
+
+Projeto desenvolvido para prática e evolução em desenvolvimento backend com PHP.
